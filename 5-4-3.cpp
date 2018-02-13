@@ -1,3 +1,9 @@
+/*****
+ * 果园里面的树：
+ *  三角形面积的计算方法：行列式法   或者海伦公式(小心浮点数陷阱)
+ * 
+ * */
+
 #include <iostream>
 using namespace std;
 float min_L(float x1,float x2,float x3){
