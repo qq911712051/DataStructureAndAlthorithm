@@ -11,7 +11,7 @@ struct Node{
 };
 int dir[4][2]={-1,0,0,1,1,0,0,-1};
 char Map[30][30],M,N;
-int vis[30][30];b
+int vis[30][30];
 int sx,sy,tx,ty;
 int check(Node node,int dire){
 	
@@ -52,26 +52,26 @@ void bfs(Node node){
 				
 					break;
 				case 2:
-					if(i==0&&tmp.x>1&&Map[tmp.x-1][tmp.y]=='.'&&!vis[tmp.x-1][tmp.y]){
+					if(i==0&&tmp.x>1&&(Map[tmp.x-1][tmp.y]=='.'||Map[tmp.x-1][tmp.y]=='T')&&!vis[tmp.x-1][tmp.y]){
 						tmp.x-=1;
 						vis[tmp.x][tmp.y]=1;
 						
 						
 						q.push(tmp);
-					}
-					if(i==1&&tmp.y<N&&Map[tmp.x][tmp.y+1]=='.'&&!vis[tmp.x][tmp.y+1]){
+					} else 
+					if(i==1&&tmp.y<N&&(Map[tmp.x][tmp.y+1]=='.'||Map[tmp.x][tmp.y+1]=='T')&&!vis[tmp.x][tmp.y+1]){
 						tmp.y+=1;
 						vis[tmp.x][tmp.y]=1;
 						
 						q.push(tmp);
-					}
-					if(i==2&&tmp.x<M&&Map[tmp.x+1][tmp.y]=='.'&&!vis[tmp.x+1][tmp.y]){
+					} else
+					if(i==2&&tmp.x<M&&(Map[tmp.x+1][tmp.y]=='.'||Map[tmp.x+1][tmp.y]=='T')&&!vis[tmp.x+1][tmp.y]){
 						tmp.x+=1;
 						vis[tmp.x][tmp.y]=1;
 					
 						q.push(tmp);
-					}
-					if(i==3&&tmp.y>1&&Map[tmp.x][tmp.y-1]=='.'&&!vis[tmp.x][tmp.y-1]){
+					} else
+					if(i==3&&tmp.y>1&&(Map[tmp.x][tmp.y-1]=='.'||Map[tmp.x][tmp.y-1]=='T')&&!vis[tmp.x][tmp.y-1]){
 						tmp.y-=1;
 						vis[tmp.x][tmp.y]=1;
 					
