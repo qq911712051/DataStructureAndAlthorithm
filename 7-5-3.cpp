@@ -59,7 +59,7 @@ void print(int cur){
 	if(pre_path[cur])
 		print(pre_path[cur]);
 	cout<<"-----------------"<<endl;
-	cout<<Queue[cur][0]<<"\t"<<Queue[cur][1]<<"\t"<<Queue[cur][2]<<endl;
+	cout<<Queue[cur][0]<<"\t"<<Queue[cur][1]<<"\t"<<Queue[cur][2]<<endl;a.	
 	cout<<Queue[cur][3]<<"\t"<<Queue[cur][4]<<"\t"<<Queue[cur][5]<<endl;
 	cout<<Queue[cur][6]<<"\t"<<Queue[cur][7]<<"\t"<<Queue[cur][8]<<endl;
 }
